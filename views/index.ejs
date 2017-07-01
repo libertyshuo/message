@@ -1,0 +1,34 @@
+<%- include header %>
+        <div class="panel">
+            <br>
+            <br>
+            <h4>报道取号</h4>
+            <button id="getNumber">取号</button>
+            <br>
+        
+            <h4>获取学号二维码</h4>
+            <button id="QRCode">获取学号二维码</button>
+            <br>
+        
+            <button id="refresh">刷新当前页面</button>
+
+        </div>
+        <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script type="text/javascript">
+            var signatureMap = "<%= JSON.stringify(signatureMap) %>";
+            console.log(signatureMap.replace(/&#34;/g, "\""));
+
+            signatureMap = JSON.parse(signatureMap.replace(/&#34;/g, "\""));
+            console.log(signatureMap);
+
+            var signature = signatureMap.signature;
+            var noncestr = signatureMap.noncestr;
+            var timestamp = signatureMap.timestamp;
+            var appId = signatureMap.appId;
+            var userId = signatureMap.UserId;
+            var jsapi_ticket = signatureMap.jsapi_ticket;
+        </script>
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+<%- include footer%>
+ 
