@@ -237,9 +237,9 @@ exports.init = function (app) {
     //        console.log(link);
             var result = https.get(link, function(data){
                 var bodyChunks = '';
-                app.models.setup.findOne({interval:{'!':null}}, function(err, setup){
+                app.models.setup.findOne({distance:{'!':null}}, function(err, setup){
                     // console.log("setup=================",setup)
-                    interval = setup.interval;
+                    interval = setup.distance;
                     massage_num = setup.massage_num;
                 });
                 if(fs.existsSync('section.dat')){

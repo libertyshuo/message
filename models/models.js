@@ -13,7 +13,7 @@ var adapters = {
 var connections = {
   mysql: {
     adapter: 'mysql',
-    url: 'mysql://root:a19930927@localhost/Room'  
+    url: 'mysql://root:123456@localhost/Room'  
   }
 };
 // 数据集合 
@@ -53,7 +53,7 @@ var setup = Waterline.Collection.extend({
   // autoPK:false,   //此字段为 true 时,数据表会自动生成 id 唯一标识字段
   attributes:{
     //设置叫号间隔
-    interval:{
+    distance:{
       type:'integer',
       required:true, 
     },
